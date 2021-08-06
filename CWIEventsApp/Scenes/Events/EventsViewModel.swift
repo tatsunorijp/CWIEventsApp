@@ -11,9 +11,15 @@
 import RxCocoa
 import RxSwift
 
-protocol EventsViewModelInput: AnyObject {}
+protocol EventsViewModelInput: AnyObject {
+    var onViewDidLoad: PublishSubject<Void> { get }
+}
 
-protocol EventsViewModelOutput: AnyObject {}
+protocol EventsViewModelOutput: AnyObject {
+    var events: Driver<[EventsViewModel.EventsDisplay]> { get }
+    var isLoading: Driver<Bool> { get }
+    var error: Driver<Error> { get }
+}
 
 protocol EventsViewModelType: AnyObject {
     var input: EventsViewModelInput { get }
@@ -22,9 +28,46 @@ protocol EventsViewModelType: AnyObject {
 
 final class EventsViewModel: EventsViewModelType, EventsViewModelInput, EventsViewModelOutput {
     
-    init(interactor: EventsInteractable) {}
-
+    var events: Driver<[EventsDisplay]>
+    var isLoading: Driver<Bool>
+    var error: Driver<Error>
+    
+    init(interactor: EventsInteractable) {
+        let activityTracker = ActivityIndicator()
+        let errorTracker = ErrorTracker()
+        isLoading = activityTracker.asDriver()
+        error = errorTracker.asDriver()
+        
+        let fetchedEvents = onViewDidLoad.asDriverOnErrorJustComplete()
+            .flatMap { _ in
+                interactor.getEvents()
+                    .asDriver(trackActivityWith: activityTracker, onErrorTrackWith: errorTracker)
+            }
+        
+        events = fetchedEvents
+            .map { $0.map { event in
+                return EventsDisplay(
+                    id: event.id,
+                    title: event.title,
+                    price: event.price.currencyFormatted(),
+                    imageURL: event.imageURL,
+                    date: event.date.timestampToDate.formatted(using: .complete)
+                )
+            }}
+    }
+    
+    var onViewDidLoad: PublishSubject<Void> = PublishSubject()
+    
     var input: EventsViewModelInput { return self }
     var output: EventsViewModelOutput { return self }
+}
 
+extension EventsViewModel {
+    struct EventsDisplay: Equatable {
+        let id: String
+        let title: String
+        let price: String
+        let imageURL: String
+        let date: String
+    }
 }

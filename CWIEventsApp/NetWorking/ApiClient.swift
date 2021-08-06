@@ -15,6 +15,10 @@ class ApiClient {
         return request(ApiRouter.getFacts(term: term))
     }
     
+    static func getEvents() -> Observable<[Event]> {
+        return request(ApiRouter.getEvents)
+    }
+    
     private static func request<T: Codable> (_ urlConvertible: URLRequestConvertible) -> Observable<T> {
         return Observable<T>.create { observer in
             if !(NetworkReachabilityManager()?.isReachable ?? false) {
@@ -22,12 +26,11 @@ class ApiClient {
             }
             
             let request = AF.request(urlConvertible)
-                .responseDecodable(of: Facts.self) { response in
+                .responseDecodable { (response: AFDataResponse<T>) in
                     
                     switch response.result {
                     case .success(let value):
-                        guard let facts = value as? T else { return observer.onError(ApiError.unexpected) }
-                        observer.onNext(facts)
+                        observer.onNext(value)
                         observer.onCompleted()
                     case .failure(let error):
                         switch response.response?.statusCode {

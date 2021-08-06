@@ -9,16 +9,50 @@
 import RxSwift
 
 protocol EventsInteractable: AnyObject {
-    // Declare here the methods needed to communicate between the ViewModel and Interactor
+    func getEvents() -> Single<[Event]>
 }
 
 final class EventsInteractor: EventsInteractable {
-    // typealias Service = Service1 & Service2 & ...
-    // private let service: Service
-    // private let repository: AbstractRepository<ModelType>
-
-    // init(service: Service, repository: AbstractRepository<ModelType>) {
-    //     self.service = service
-    //     self.repository = repository
-    // }
+    func getEvents() -> Single<[Event]> {
+        return ApiClient.getEvents().asSingle()
+        
+//        let eventsMock = [
+//            Event(
+//                people: [],
+//                date: 1,
+//                description: "1",
+//                image: "",
+//                longitude: 0,
+//                latitude: 0,
+//                price: 0,
+//                title: "1",
+//                id: "1"
+//            ),
+//            Event(
+//                people: [],
+//                date: 2,
+//                description: "2",
+//                image: "",
+//                longitude: 0,
+//                latitude: 0,
+//                price: 0,
+//                title: "2",
+//                id: "2"
+//            ),
+//            Event(
+//                people: [],
+//                date: 3,
+//                description: "3",
+//                image: "",
+//                longitude: 0,
+//                latitude: 0,
+//                price: 0,
+//                title: "3",
+//                id: "3"
+//            )
+//        ]
+//
+//        return Single.just(Events(events: eventsMock))
+//            .delay(.seconds(2), scheduler: MainScheduler.instance)
+    }
 }

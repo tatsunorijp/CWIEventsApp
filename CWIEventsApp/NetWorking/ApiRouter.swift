@@ -11,6 +11,7 @@ import Alamofire
 enum ApiRouter: URLRequestConvertible {
     
     case getFacts(term: String)
+    case getEvents
     
     func asURLRequest() throws -> URLRequest {
         let url = try Environment.baseURL.asURL()
@@ -34,6 +35,8 @@ enum ApiRouter: URLRequestConvertible {
         switch self {
         case .getFacts:
             return .get
+        case .getEvents:
+            return .get
         }
     }
     
@@ -41,6 +44,8 @@ enum ApiRouter: URLRequestConvertible {
         switch self {
         case .getFacts:
             return "search"
+        case .getEvents:
+            return "events"
         }
     }
     
@@ -48,6 +53,8 @@ enum ApiRouter: URLRequestConvertible {
         switch self {
         case .getFacts(let term):
             return ["query": term]
+        case .getEvents:
+            return [:]
         }
     }
     

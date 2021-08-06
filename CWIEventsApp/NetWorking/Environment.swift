@@ -8,5 +8,5 @@
 import Foundation
 
 struct Environment {
-    static let baseURL = ""
+    static let baseURL = "http://5f5a8f24d44d640016169133.mockapi.io/api/"
 }

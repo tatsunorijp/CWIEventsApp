@@ -24,6 +24,9 @@ target 'CWIEventsApp' do
 	# Ferramenta de constraints
 	pod "TinyConstraints"
 
+	# Ferramenta para carregar imagens
+	pod 'Kingfisher'
+
 	# API
 	pod 'Alamofire'
 

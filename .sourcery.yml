@@ -1,0 +1,6 @@
+
+sources:
+    - CWIEventsApp
+templates:
+    - CWIEventsApp/SupportFiles/AutoMockable.stencil
+output: CWIEventsApp/Generated

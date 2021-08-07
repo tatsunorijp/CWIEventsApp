@@ -9,21 +9,19 @@
 import UIKit
 
 protocol EventsRouting: AnyObject {
-    // Declare methods to navigate to other scenes
-    // func navigateToOtherScene()
+    func navigateToEventDetails(event: Event)
 }
 
 final class EventsRouter: Router, EventsRouting {
-    /* All the builders needed when navigating must be passed as parameters in the constructor.
-     init(otherSceneBuilder: OtherSceneBuildable) {
-     self.otherSceneBuilder = otherSceneBuilder
-     }
-
-     func navigateToOtherScene() {
-     let otherScene = otherSceneBuilder.build()
-     viewController.navigationController.pushViewController(otherScene, animated: true)
-     }
-
-     private let otherSceneBuilder: OtherSceneBuildable
-     */
+    let eventDetailsBuilder: EventDetailsBuildable
+    
+    init(eventDetailsBuilder: EventDetailsBuildable) {
+        self.eventDetailsBuilder = eventDetailsBuilder
+    }
+    
+    func navigateToEventDetails(event: Event) {
+        let eventDetailsVC = eventDetailsBuilder.build(event: event)
+        viewController.navigationController?
+            .pushViewController(eventDetailsVC, animated: true)
+    }
 }

@@ -22,9 +22,7 @@ final class EventCell: UICollectionViewCell, NibLoadable {
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
-    @IBOutlet private weak var locationLabel: UILabel!
     @IBOutlet private weak var price: UILabel!
-    @IBOutlet private weak var locationStackView: UIStackView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -66,6 +64,11 @@ final class EventCell: UICollectionViewCell, NibLoadable {
 
 final class EventSectionController: ListSectionController {
     var event: EventsViewModel.EventsDisplay!
+    let didSelectEvent: (String) -> Void
+    
+    init(didSelectEvent: @escaping (String) -> Void) {
+        self.didSelectEvent = didSelectEvent
+    }
     
     override func didUpdate(to object: Any) {
         super.didUpdate(to: object)
@@ -85,6 +88,11 @@ final class EventSectionController: ListSectionController {
         cell.setup(with: event)
         
         return cell
+    }
+    
+    override func didSelectItem(at index: Int) {
+        super.didSelectItem(at: index)
+        didSelectEvent(event.id)
     }
     
     override func sizeForItem(at index: Int) -> CGSize {

@@ -29,6 +29,11 @@ internal enum L10n {
       return L10n.tr("Localizable", "Error.Unexpected", String(describing: p1))
     }
   }
+
+  internal enum Events {
+    /// CWI Eventos
+    internal static let title = L10n.tr("Localizable", "Events.Title")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

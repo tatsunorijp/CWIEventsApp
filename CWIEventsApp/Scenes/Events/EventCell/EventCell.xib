@@ -27,47 +27,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="eoD-e5-yst">
-                                <rect key="frame" x="88" y="44.5" width="443" height="20"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="F0g-79-eIS">
+                                <rect key="frame" x="88" y="44.5" width="407" height="20"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="F0g-79-eIS">
-                                        <rect key="frame" x="0.0" y="0.0" width="54.5" height="20"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="Rh4-eJ-f2v">
-                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                <color key="tintColor" name="Gray500"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="2NH-Su-1mc"/>
-                                                    <constraint firstAttribute="width" constant="20" id="LkF-Ji-T1C"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elC-aW-21e">
-                                                <rect key="frame" x="24" y="0.0" width="30.5" height="20"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" name="Gray500"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdN-KZ-aFD">
-                                        <rect key="frame" x="347.5" y="0.0" width="95.5" height="20"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="2fV-t8-Sce">
-                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                <color key="tintColor" name="Gray500"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="Aep-2s-xiz"/>
-                                                    <constraint firstAttribute="height" constant="20" id="Tn6-o5-aid"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Localização" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfQ-Qp-lB6">
-                                                <rect key="frame" x="20" y="0.0" width="75.5" height="20"/>
-                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
-                                                <color key="textColor" name="Gray500"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="Rh4-eJ-f2v">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                        <color key="tintColor" name="Gray500"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="2NH-Su-1mc"/>
+                                            <constraint firstAttribute="width" constant="20" id="LkF-Ji-T1C"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elC-aW-21e">
+                                        <rect key="frame" x="24" y="0.0" width="383" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="Gray500"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohu-5A-7NK">
@@ -76,19 +52,29 @@
                                 <color key="textColor" name="Gray500"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disclosureIdicator" translatesAutoresizingMaskIntoConstraints="NO" id="aUK-sC-y9O">
+                                <rect key="frame" x="527" y="46" width="20" height="20"/>
+                                <color key="tintColor" name="Gray300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="JK5-NS-Y6E"/>
+                                    <constraint firstAttribute="width" constant="20" id="z2r-DG-Edp"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ohu-5A-7NK" secondAttribute="bottom" constant="8" id="AhK-qQ-nQo"/>
-                            <constraint firstItem="ohu-5A-7NK" firstAttribute="top" secondItem="eoD-e5-yst" secondAttribute="bottom" constant="4" id="C4s-bT-jRs"/>
-                            <constraint firstItem="eoD-e5-yst" firstAttribute="top" secondItem="RdI-TD-9W1" secondAttribute="bottom" constant="8" id="CjB-5P-cqo"/>
                             <constraint firstAttribute="trailing" secondItem="RdI-TD-9W1" secondAttribute="trailing" constant="32" id="Knw-6G-KFJ"/>
-                            <constraint firstItem="eoD-e5-yst" firstAttribute="leading" secondItem="0Nu-gx-weL" secondAttribute="leading" constant="88" id="NlM-9O-alz"/>
+                            <constraint firstItem="F0g-79-eIS" firstAttribute="top" secondItem="RdI-TD-9W1" secondAttribute="bottom" constant="8" id="LEJ-Bf-2Vx"/>
+                            <constraint firstItem="aUK-sC-y9O" firstAttribute="leading" secondItem="F0g-79-eIS" secondAttribute="trailing" constant="32" id="QmO-db-bBG"/>
+                            <constraint firstAttribute="trailing" secondItem="ohu-5A-7NK" secondAttribute="trailing" constant="32" id="aDG-1T-Zvu"/>
                             <constraint firstItem="RdI-TD-9W1" firstAttribute="leading" secondItem="0Nu-gx-weL" secondAttribute="leading" constant="88" id="d1p-1l-akN"/>
+                            <constraint firstItem="aUK-sC-y9O" firstAttribute="centerY" secondItem="0Nu-gx-weL" secondAttribute="centerY" id="die-OG-tAx"/>
                             <constraint firstItem="RdI-TD-9W1" firstAttribute="top" secondItem="0Nu-gx-weL" secondAttribute="top" constant="16" id="fy7-aR-BuB"/>
-                            <constraint firstAttribute="trailing" secondItem="ohu-5A-7NK" secondAttribute="trailing" constant="32" id="gdy-N4-wC2"/>
                             <constraint firstItem="ohu-5A-7NK" firstAttribute="leading" secondItem="0Nu-gx-weL" secondAttribute="leading" constant="88" id="huN-DL-WCF"/>
-                            <constraint firstAttribute="trailing" secondItem="eoD-e5-yst" secondAttribute="trailing" constant="32" id="p6B-Z5-sVd"/>
+                            <constraint firstItem="F0g-79-eIS" firstAttribute="leading" secondItem="0Nu-gx-weL" secondAttribute="leading" constant="88" id="m1i-dQ-frc"/>
+                            <constraint firstAttribute="trailing" secondItem="aUK-sC-y9O" secondAttribute="trailing" constant="16" id="oL1-Vq-TbH"/>
+                            <constraint firstItem="ohu-5A-7NK" firstAttribute="top" secondItem="F0g-79-eIS" secondAttribute="bottom" constant="4" id="pJG-wt-MRV"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKh-K1-olb">
@@ -125,17 +111,18 @@
                 <outlet property="dateLabel" destination="elC-aW-21e" id="THW-mz-ITp"/>
                 <outlet property="imageContentView" destination="PKh-K1-olb" id="Vqo-mc-WrH"/>
                 <outlet property="imageView" destination="Wqd-n2-Jf9" id="FOQ-KI-Jup"/>
-                <outlet property="locationLabel" destination="ZfQ-Qp-lB6" id="SO1-ER-FAy"/>
-                <outlet property="locationStackView" destination="UdN-KZ-aFD" id="cso-iQ-gOk"/>
                 <outlet property="price" destination="ohu-5A-7NK" id="YG9-u9-m2v"/>
                 <outlet property="titleLabel" destination="RdI-TD-9W1" id="iJW-2D-V3a"/>
             </connections>
-            <point key="canvasLocation" x="558.69565217391312" y="220.3125"/>
+            <point key="canvasLocation" x="558.69565217391312" y="236.38392857142856"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="calendar" width="24" height="24"/>
-        <image name="location" width="48" height="48"/>
+        <image name="disclosureIdicator" width="24" height="24"/>
+        <namedColor name="Gray300">
+            <color red="0.69411764705882351" green="0.69411764705882351" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Gray500">
             <color red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

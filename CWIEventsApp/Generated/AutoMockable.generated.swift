@@ -28,3 +28,20 @@ import AppKit
 
 
 
+class EventsInteractableMock: EventsInteractable {
+
+    //MARK: - getEvents
+
+    var getEventsCallsCount = 0
+    var getEventsCalled: Bool {
+        return getEventsCallsCount > 0
+    }
+    var getEventsReturnValue: Single<[Event]>!
+    var getEventsClosure: (() -> Single<[Event]>)?
+
+    func getEvents() -> Single<[Event]> {
+        getEventsCallsCount += 1
+        return getEventsClosure.map({ $0() }) ?? getEventsReturnValue
+    }
+
+}

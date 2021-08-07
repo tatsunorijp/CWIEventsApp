@@ -46,7 +46,7 @@ final class EventsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "CWI Eventos"
+        title = L10n.Events.title
         prepareCollectionView()
         viewModel.input.onViewDidLoad.onNext(())
     }
@@ -55,9 +55,14 @@ final class EventsViewController: BaseViewController {
         super.bindViewModel()
         viewModel.output.events
             .drive { [weak self] events in
-                print(events)
                 self?.events = events
                 self?.adapter.performUpdates(animated: true, completion: nil)
+            }
+            .disposed(by: disposeBag)
+        
+        viewModel.output.selectedEvent
+            .drive { [weak self] selectedEvent in
+                self?.router.navigateToEventDetails(event: selectedEvent)
             }
             .disposed(by: disposeBag)
         
@@ -100,7 +105,9 @@ extension EventsViewController: ListAdapterDataSource {
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        return EventSectionController()
+        return EventSectionController(didSelectEvent: { [weak self] selectedId in
+            self?.viewModel.input.onSelectEventId.onNext(selectedId)
+        })
     }
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? {

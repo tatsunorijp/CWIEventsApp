@@ -24,6 +24,7 @@ internal enum Asset {
   internal enum Assets {
     internal static let calendar = ImageAsset(name: "calendar")
     internal static let cwiLogo = ImageAsset(name: "cwiLogo")
+    internal static let disclosureIdicator = ImageAsset(name: "disclosureIdicator")
     internal static let location = ImageAsset(name: "location")
     internal static let magnifier = ImageAsset(name: "magnifier")
     internal static let share = ImageAsset(name: "share")

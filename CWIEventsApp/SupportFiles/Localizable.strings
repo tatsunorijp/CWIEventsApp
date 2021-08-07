@@ -15,3 +15,7 @@
 "Error.Unexpected" = "
 Error %@, please contact our providers.";
 /*ChuckNorrisErrors*/
+
+/*Events*/
+"Events.Title" = "CWI Eventos";
+/*Events*/

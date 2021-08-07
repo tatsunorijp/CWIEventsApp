@@ -16,7 +16,7 @@ final class EventsBuilder: Builder, EventsBuildable {
     func build() -> UIViewController {
         let interactor = EventsInteractor()
         let viewModel = EventsViewModel(interactor: interactor)
-        let router = EventsRouter()
+        let router = EventsRouter(eventDetailsBuilder: EventDetailsBuilder())
         let viewController = EventsViewController(withViewModel: viewModel, router: router)
         router.viewController = viewController
 

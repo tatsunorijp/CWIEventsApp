@@ -7,7 +7,7 @@
 //
 
 import RxSwift
-
+// sourcery: AutoMockable
 protocol EventsInteractable: AnyObject {
     func getEvents() -> Single<[Event]>
 }

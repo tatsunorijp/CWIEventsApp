@@ -16,9 +16,9 @@ extension DateFormatter {
         return formatter
     }
     
-    static let enUsLocale = Locale(identifier: "en_US")
-    
-    static let complete = DateFormatter.with(format: "yy MMM dd 'At' HH:mm")
-    
-    static let iso8601 = DateFormatter.with(format: "y-MM-dd H:m:ss.SSSSSS")
+    static let enUsLocale = Locale(identifier: "pt_BR")
+
+    static let compacted = DateFormatter.with(format: "dd/MM/yyyy")
+    static let dayMonthShort = DateFormatter.with(format: "dd 'de' MMMM")
+
 }

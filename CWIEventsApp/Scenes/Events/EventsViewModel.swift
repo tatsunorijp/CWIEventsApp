@@ -13,10 +13,12 @@ import RxSwift
 
 protocol EventsViewModelInput: AnyObject {
     var onViewDidLoad: PublishSubject<Void> { get }
+    var onSelectEventId: PublishSubject<String> { get }
 }
 
 protocol EventsViewModelOutput: AnyObject {
     var events: Driver<[EventsViewModel.EventsDisplay]> { get }
+    var selectedEvent: Driver<Event> { get }
     var isLoading: Driver<Bool> { get }
     var error: Driver<Error> { get }
 }
@@ -29,6 +31,7 @@ protocol EventsViewModelType: AnyObject {
 final class EventsViewModel: EventsViewModelType, EventsViewModelInput, EventsViewModelOutput {
     
     var events: Driver<[EventsDisplay]>
+    var selectedEvent: Driver<Event>
     var isLoading: Driver<Bool>
     var error: Driver<Error>
     
@@ -51,12 +54,19 @@ final class EventsViewModel: EventsViewModelType, EventsViewModelInput, EventsVi
                     title: event.title,
                     price: event.price.currencyFormatted(),
                     imageURL: event.imageURL,
-                    date: event.date.timestampToDate.formatted(using: .complete)
+                    date: event.date.timestampToDate.formatted(using: .dayMonthShort)
                 )
             }}
+        
+        selectedEvent = onSelectEventId.asDriverOnErrorJustComplete()
+            .withLatestFrom(fetchedEvents) { (selectedId: $0, events: $1) }
+            .map { selectedId, events in
+                return events.first(where: { $0.id == selectedId })!
+            }
     }
     
     var onViewDidLoad: PublishSubject<Void> = PublishSubject()
+    var onSelectEventId: PublishSubject<String> = PublishSubject()
     
     var input: EventsViewModelInput { return self }
     var output: EventsViewModelOutput { return self }

@@ -30,6 +30,19 @@ internal enum L10n {
     }
   }
 
+  internal enum EventDetails {
+    internal enum Button {
+      /// CHECK IN
+      internal static let checkIn = L10n.tr("Localizable", "EventDetails.Button.CheckIn")
+      /// COMPARTILHAR
+      internal static let share = L10n.tr("Localizable", "EventDetails.Button.Share")
+    }
+    internal enum Label {
+      /// Localização
+      internal static let localization = L10n.tr("Localizable", "EventDetails.Label.Localization")
+    }
+  }
+
   internal enum Events {
     /// CWI Eventos
     internal static let title = L10n.tr("Localizable", "Events.Title")

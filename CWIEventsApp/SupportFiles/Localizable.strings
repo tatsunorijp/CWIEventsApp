@@ -19,3 +19,9 @@ Error %@, please contact our providers.";
 /*Events*/
 "Events.Title" = "CWI Eventos";
 /*Events*/
+
+/*EventDetails*/
+"EventDetails.Label.Localization" = "Localização";
+"EventDetails.Button.CheckIn" = "CHECK IN";
+"EventDetails.Button.Share" = "COMPARTILHAR";
+/*EventDetails*/

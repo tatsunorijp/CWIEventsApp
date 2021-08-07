@@ -11,9 +11,15 @@
 import RxCocoa
 import RxSwift
 
-protocol EventDetailsViewModelInput: AnyObject {}
+protocol EventDetailsViewModelInput: AnyObject {
+    var onViewDidLoad: PublishSubject<Void> { get }
+    var onCoordinatesRequested: PublishSubject<Void> { get }
+}
 
-protocol EventDetailsViewModelOutput: AnyObject {}
+protocol EventDetailsViewModelOutput: AnyObject {
+    var eventDetails: Driver<EventDetailsViewModel.EventDisplay> { get }
+    var coordinate: Driver<EventDetailsViewModel.Coordinate> { get }
+}
 
 protocol EventDetailsViewModelType: AnyObject {
     var input: EventDetailsViewModelInput { get }
@@ -22,9 +28,49 @@ protocol EventDetailsViewModelType: AnyObject {
 
 final class EventDetailsViewModel: EventDetailsViewModelType, EventDetailsViewModelInput, EventDetailsViewModelOutput {
     
-    init(interactor: EventDetailsInteractable, event: Event) {}
+    var eventDetails: Driver<EventDisplay>
+    var coordinate: Driver<Coordinate>
+    
+    init(interactor: EventDetailsInteractable, event: Event) {
+        eventDetails = onViewDidLoad.asDriverOnErrorJustComplete()
+            .map { _ in
+                EventDisplay(
+                    title: event.title,
+                    description: event.description,
+                    price: event.price.currencyFormatted(),
+                    date: event.date.timestampToDate.formatted(using: .compacted),
+                    imageURL: event.imageURL
+                )
+            }
+        
+        coordinate = onCoordinatesRequested.asDriverOnErrorJustComplete()
+            .map { _ in
+                Coordinate(
+                    longitud: event.longitude,
+                    latitude: event.latitude
+                )
+            }
+    }
+    
+    var onViewDidLoad: PublishSubject<Void> = PublishSubject()
+    var onCoordinatesRequested: PublishSubject<Void> = PublishSubject()
 
     var input: EventDetailsViewModelInput { return self }
     var output: EventDetailsViewModelOutput { return self }
 
+}
+
+extension EventDetailsViewModel {
+    struct EventDisplay: Equatable {
+        let title: String
+        let description: String
+        let price: String
+        let date: String
+        let imageURL: String
+    }
+    
+    struct Coordinate {
+        let longitud: Double
+        let latitude: Double
+    }
 }

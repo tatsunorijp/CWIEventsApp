@@ -57,6 +57,19 @@ class BaseButton: UIButton {
             .disposed(by: disposeBag)
     }
     
+    func addIcon(icon: UIImage) {
+        semanticContentAttribute = .forceRightToLeft
+        imageView?.contentMode = .scaleAspectFit
+        tintColor = Asset.Colors.white.color
+        imageEdgeInsets = UIEdgeInsets(
+            top: 8,
+            left: 32,
+            bottom: 8,
+            right: 0
+        )
+        setImage(icon, for: .normal)
+    }
+    
     private func showLoading() {
         buttonState.title = self.title(for: .normal)
         buttonState.icon = self.image(for: .normal)

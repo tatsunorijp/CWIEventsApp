@@ -1,14 +1,14 @@
   
 
-# ChuckNorris App
+# CWI Events
 
 ## O que é?
 Este é um aplicativo para demonstrar uma parte do meu conhecimento em desenvolvimento de aplicativos mobile para a plataforma iOS.
-Consiste basicamente em consumir dados da API [ChuckNorrisAPI](https://api.chucknorris.io/)
+Consiste em exibir uma lista de eventos e possibilitar o check-in em cada um deles, mais detalhes pode ser encontrado em https://github.com/WoopSicredi/jobs/issues/3
 
 ### Como executar?
 Para executar clone o repositório e instale as dependências com o cocoa pods
-> _git clone https://github.com/tatsunorijp/ChuckNorrisApp_
+> _git clone https://github.com/tatsunorijp/CWIEventsApp_
 
 > _pod install_
 

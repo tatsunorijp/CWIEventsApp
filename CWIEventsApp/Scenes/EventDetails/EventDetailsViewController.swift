@@ -76,6 +76,12 @@ final class EventDetailsViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
         
+        viewModel.output.eventIDToCheckIn
+            .drive { [weak self] eventID in
+                self?.router.navigateToCheckIn(eventID: eventID)
+            }
+            .disposed(by: disposeBag)
+        
         shareButton.rx.tap
             .bind { _ in
                 let fact = self.eventContentView.snapshot()
@@ -84,6 +90,12 @@ final class EventDetailsViewController: BaseViewController {
                     applicationActivities: nil
                 )
                 self.present(activityViewController, animated: true, completion: nil)
+            }
+            .disposed(by: disposeBag)
+        
+        checkinButton.rx.tap
+            .bind { _ in
+                self.viewModel.input.onCheckInChange.onNext(())
             }
             .disposed(by: disposeBag)
     }

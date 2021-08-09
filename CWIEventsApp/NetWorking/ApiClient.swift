@@ -15,6 +15,14 @@ class ApiClient {
         return request(ApiRouter.getEvents)
     }
     
+    static func confirmCheckIn(
+        eventId: String,
+        name: String,
+        email: String)
+    -> Observable<EmptyResponse> {
+        return request(ApiRouter.confirmCheckIn(eventid: eventId, name: name, email: email))
+    }
+    
     private static func request<T: Codable> (_ urlConvertible: URLRequestConvertible) -> Observable<T> {
         return Observable<T>.create { observer in
             if !(NetworkReachabilityManager()?.isReachable ?? false) {

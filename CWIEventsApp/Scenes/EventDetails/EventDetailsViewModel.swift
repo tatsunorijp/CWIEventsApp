@@ -14,11 +14,13 @@ import RxSwift
 protocol EventDetailsViewModelInput: AnyObject {
     var onViewDidLoad: PublishSubject<Void> { get }
     var onCoordinatesRequested: PublishSubject<Void> { get }
+    var onCheckInChange: PublishSubject<Void> { get }
 }
 
 protocol EventDetailsViewModelOutput: AnyObject {
     var eventDetails: Driver<EventDetailsViewModel.EventDisplay> { get }
     var coordinate: Driver<EventDetailsViewModel.Coordinate> { get }
+    var eventIDToCheckIn: Driver<String> { get }
 }
 
 protocol EventDetailsViewModelType: AnyObject {
@@ -30,6 +32,7 @@ final class EventDetailsViewModel: EventDetailsViewModelType, EventDetailsViewMo
     
     var eventDetails: Driver<EventDisplay>
     var coordinate: Driver<Coordinate>
+    var eventIDToCheckIn: Driver<String>
     
     init(interactor: EventDetailsInteractable, event: Event) {
         eventDetails = onViewDidLoad.asDriverOnErrorJustComplete()
@@ -50,10 +53,16 @@ final class EventDetailsViewModel: EventDetailsViewModelType, EventDetailsViewMo
                     latitude: event.latitude
                 )
             }
+        
+        eventIDToCheckIn = onCheckInChange.asDriverOnErrorJustComplete()
+            .map { _ in
+                event.id
+            }
     }
     
     var onViewDidLoad: PublishSubject<Void> = PublishSubject()
     var onCoordinatesRequested: PublishSubject<Void> = PublishSubject()
+    var onCheckInChange: PublishSubject<Void> = PublishSubject()
 
     var input: EventDetailsViewModelInput { return self }
     var output: EventDetailsViewModelOutput { return self }

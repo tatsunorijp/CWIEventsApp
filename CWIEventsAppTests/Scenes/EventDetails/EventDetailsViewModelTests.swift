@@ -19,6 +19,7 @@ final class EventDetailsViewModelTests: XCTestCase {
     
     private var eventDetails: TestableObserver<EventDetailsViewModel.EventDisplay>!
     private var coordinate: TestableObserver<EventDetailsViewModel.Coordinate>!
+    var eventIDToCheckIn: TestableObserver<String>!
     
     override func setUp() {
         super.setUp()
@@ -55,6 +56,9 @@ final class EventDetailsViewModelTests: XCTestCase {
         coordinate = testScheduler.createObserver(EventDetailsViewModel.Coordinate.self)
         sut.output.coordinate.drive(coordinate).disposed(by: disposeBag)
         
+        eventIDToCheckIn = testScheduler.createObserver(String.self)
+        sut.output.eventIDToCheckIn.drive(eventIDToCheckIn).disposed(by: disposeBag)
+        
     }
 
     func test_shouldEventDetailsReturn_with_correctFormat() {
@@ -78,5 +82,12 @@ final class EventDetailsViewModelTests: XCTestCase {
                 latitude: 1
             )
         ])
+    }
+    
+    func test_eventIDTocheckInShouldReturn() {
+        sut.input.onViewDidLoad.onNext(())
+        sut.input.onCheckInChange.onNext(())
+        
+        XCTAssertEqual(eventIDToCheckIn.events.compactMap { $0.value.element }, ["1"])
     }
 }

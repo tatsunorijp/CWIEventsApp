@@ -25,3 +25,10 @@ Error %@, please contact our providers.";
 "EventDetails.Button.CheckIn" = "CHECK IN";
 "EventDetails.Button.Share" = "COMPARTILHAR";
 /*EventDetails*/
+
+/*CheckIn*/
+"CheckIn.Label.Title" = "Digite seus dados para confirmar a presença no evento";
+"CheckIn.TextField.Placeholder.CompleteName" = "Nome Completo";
+"CheckIn.TextField.Placeholder.Email" = "Email";
+"CheckIn.Button.Confirm" = "CONFIRMAR PRESENÇA";
+/*CheckIn*/

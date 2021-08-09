@@ -16,7 +16,7 @@ final class EventDetailsBuilder: Builder, EventDetailsBuildable {
     func build(event: Event) -> UIViewController {
         let interactor = EventDetailsInteractor()
         let viewModel = EventDetailsViewModel(interactor: interactor, event: event)
-        let router = EventDetailsRouter()
+        let router = EventDetailsRouter(checkInBuilder: CheckInBuilder())
         let viewController = EventDetailsViewController(withViewModel: viewModel, router: router)
         router.viewController = viewController
 

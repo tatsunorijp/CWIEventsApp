@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Event: Codable {
+struct Event: Codable, Equatable {
     let people: [Person]
     let date: Int
     let description: String
@@ -20,6 +20,10 @@ struct Event: Codable {
         case description
         case imageURL = "image"
         case longitude, latitude, price, title, id
+    }
+    
+    static func == (lhs: Event, rhs: Event) -> Bool {
+        return lhs.id == rhs.id
     }
 }
 

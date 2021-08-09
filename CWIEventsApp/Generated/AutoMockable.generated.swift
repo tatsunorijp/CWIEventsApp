@@ -28,6 +28,27 @@ import AppKit
 
 
 
+class CheckInInteractableMock: CheckInInteractable {
+
+    //MARK: - confirmCheckIn
+
+    var confirmCheckInEventIDEmailCompleteNameCallsCount = 0
+    var confirmCheckInEventIDEmailCompleteNameCalled: Bool {
+        return confirmCheckInEventIDEmailCompleteNameCallsCount > 0
+    }
+    var confirmCheckInEventIDEmailCompleteNameReceivedArguments: (eventID: String, email: String, completeName: String)?
+    var confirmCheckInEventIDEmailCompleteNameReceivedInvocations: [(eventID: String, email: String, completeName: String)] = []
+    var confirmCheckInEventIDEmailCompleteNameReturnValue: Single<Void>!
+    var confirmCheckInEventIDEmailCompleteNameClosure: ((String, String, String) -> Single<Void>)?
+
+    func confirmCheckIn(eventID: String, email: String, completeName: String) -> Single<Void> {
+        confirmCheckInEventIDEmailCompleteNameCallsCount += 1
+        confirmCheckInEventIDEmailCompleteNameReceivedArguments = (eventID: eventID, email: email, completeName: completeName)
+        confirmCheckInEventIDEmailCompleteNameReceivedInvocations.append((eventID: eventID, email: email, completeName: completeName))
+        return confirmCheckInEventIDEmailCompleteNameClosure.map({ $0(eventID, email, completeName) }) ?? confirmCheckInEventIDEmailCompleteNameReturnValue
+    }
+
+}
 class EventDetailsInteractableMock: EventDetailsInteractable {
 
 }

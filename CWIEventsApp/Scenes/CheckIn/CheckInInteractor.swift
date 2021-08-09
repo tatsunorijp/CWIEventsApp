@@ -8,6 +8,7 @@
 
 import RxSwift
 
+// sourcery: AutoMockable
 protocol CheckInInteractable: AnyObject {
     func confirmCheckIn(eventID: String, email: String, completeName: String) -> Single<Void>
 }

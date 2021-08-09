@@ -26,6 +26,8 @@
 		0E64478626C174FD000BDFA0 /* CheckInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64478026C174FD000BDFA0 /* CheckInViewModel.swift */; };
 		0E64478726C174FD000BDFA0 /* CheckInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E64478126C174FD000BDFA0 /* CheckInViewController.xib */; };
 		0E64478926C18B6B000BDFA0 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64478826C18B6B000BDFA0 /* EmptyResponse.swift */; };
+		0E64478D26C19A5E000BDFA0 /* CheckInInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64478B26C19A5E000BDFA0 /* CheckInInteractorTests.swift */; };
+		0E64478E26C19A5E000BDFA0 /* CheckInViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64478C26C19A5E000BDFA0 /* CheckInViewModelTests.swift */; };
 		0E6F9D5426BD87E7000F9D59 /* EventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9D4E26BD87E7000F9D59 /* EventsRouter.swift */; };
 		0E6F9D5526BD87E7000F9D59 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9D4F26BD87E7000F9D59 /* EventsViewController.swift */; };
 		0E6F9D5626BD87E7000F9D59 /* EventsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9D5026BD87E7000F9D59 /* EventsBuilder.swift */; };
@@ -119,6 +121,8 @@
 		0E64478026C174FD000BDFA0 /* CheckInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewModel.swift; sourceTree = "<group>"; };
 		0E64478126C174FD000BDFA0 /* CheckInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckInViewController.xib; sourceTree = "<group>"; };
 		0E64478826C18B6B000BDFA0 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		0E64478B26C19A5E000BDFA0 /* CheckInInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInInteractorTests.swift; sourceTree = "<group>"; };
+		0E64478C26C19A5E000BDFA0 /* CheckInViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewModelTests.swift; sourceTree = "<group>"; };
 		0E6F9D4E26BD87E7000F9D59 /* EventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRouter.swift; sourceTree = "<group>"; };
 		0E6F9D4F26BD87E7000F9D59 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		0E6F9D5026BD87E7000F9D59 /* EventsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsBuilder.swift; sourceTree = "<group>"; };
@@ -249,6 +253,15 @@
 			path = CheckIn;
 			sourceTree = "<group>";
 		};
+		0E64478A26C19A4C000BDFA0 /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+				0E64478B26C19A5E000BDFA0 /* CheckInInteractorTests.swift */,
+				0E64478C26C19A5E000BDFA0 /* CheckInViewModelTests.swift */,
+			);
+			path = CheckIn;
+			sourceTree = "<group>";
+		};
 		0E6F9D4D26BD87D0000F9D59 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +306,7 @@
 		0E98A68426BD66A30085646D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0E64478A26C19A4C000BDFA0 /* CheckIn */,
 				0E64477626C16C23000BDFA0 /* EventDetails */,
 				0E6F9D5A26BD8844000F9D59 /* Events */,
 			);
@@ -921,6 +935,8 @@
 			files = (
 				0E64477A26C16C3C000BDFA0 /* EventDetailsViewModelTests.swift in Sources */,
 				0E49A00826BED28400DB639E /* EventsInteractorTests.swift in Sources */,
+				0E64478E26C19A5E000BDFA0 /* CheckInViewModelTests.swift in Sources */,
+				0E64478D26C19A5E000BDFA0 /* CheckInInteractorTests.swift in Sources */,
 				0E64477926C16C3C000BDFA0 /* EventDetailsInteractorTests.swift in Sources */,
 				0E49A00926BED28400DB639E /* EventsViewModelTests.swift in Sources */,
 			);

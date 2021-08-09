@@ -53,6 +53,7 @@ final class CheckInViewModel: CheckInViewModelType, CheckInViewModelInput, Check
         isCheckInEnable = Driver.combineLatest(isValidEmail, isCompleteNameValid)
             .map { $0 && $1 }
             .startWith(false)
+            .distinctUntilChanged()
         
         let credentials = Driver.combineLatest(
             didEmailChange.asDriverOnErrorJustComplete(),

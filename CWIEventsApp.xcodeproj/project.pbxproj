@@ -17,6 +17,8 @@
 		0E49A00926BED28400DB639E /* EventsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E49A00726BED28400DB639E /* EventsViewModelTests.swift */; };
 		0E572EDE26BDCF1600C23FDD /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E572EDD26BDCF1600C23FDD /* Double.swift */; };
 		0E572EE026BDD6E900C23FDD /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E572EDF26BDD6E900C23FDD /* Int.swift */; };
+		0E64477926C16C3C000BDFA0 /* EventDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64477726C16C3C000BDFA0 /* EventDetailsInteractorTests.swift */; };
+		0E64477A26C16C3C000BDFA0 /* EventDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64477826C16C3C000BDFA0 /* EventDetailsViewModelTests.swift */; };
 		0E6F9D5426BD87E7000F9D59 /* EventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9D4E26BD87E7000F9D59 /* EventsRouter.swift */; };
 		0E6F9D5526BD87E7000F9D59 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9D4F26BD87E7000F9D59 /* EventsViewController.swift */; };
 		0E6F9D5626BD87E7000F9D59 /* EventsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9D5026BD87E7000F9D59 /* EventsBuilder.swift */; };
@@ -101,6 +103,8 @@
 		0E572EDD26BDCF1600C23FDD /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		0E572EDF26BDD6E900C23FDD /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		0E64477426C15B02000BDFA0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E64477726C16C3C000BDFA0 /* EventDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsInteractorTests.swift; sourceTree = "<group>"; };
+		0E64477826C16C3C000BDFA0 /* EventDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		0E6F9D4E26BD87E7000F9D59 /* EventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRouter.swift; sourceTree = "<group>"; };
 		0E6F9D4F26BD87E7000F9D59 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		0E6F9D5026BD87E7000F9D59 /* EventsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsBuilder.swift; sourceTree = "<group>"; };
@@ -209,6 +213,15 @@
 			path = EventDetails;
 			sourceTree = "<group>";
 		};
+		0E64477626C16C23000BDFA0 /* EventDetails */ = {
+			isa = PBXGroup;
+			children = (
+				0E64477726C16C3C000BDFA0 /* EventDetailsInteractorTests.swift */,
+				0E64477826C16C3C000BDFA0 /* EventDetailsViewModelTests.swift */,
+			);
+			path = EventDetails;
+			sourceTree = "<group>";
+		};
 		0E6F9D4D26BD87D0000F9D59 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +266,7 @@
 		0E98A68426BD66A30085646D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0E64477626C16C23000BDFA0 /* EventDetails */,
 				0E6F9D5A26BD8844000F9D59 /* Events */,
 			);
 			path = Scenes;
@@ -869,7 +883,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E64477A26C16C3C000BDFA0 /* EventDetailsViewModelTests.swift in Sources */,
 				0E49A00826BED28400DB639E /* EventsInteractorTests.swift in Sources */,
+				0E64477926C16C3C000BDFA0 /* EventDetailsInteractorTests.swift in Sources */,
 				0E49A00926BED28400DB639E /* EventsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

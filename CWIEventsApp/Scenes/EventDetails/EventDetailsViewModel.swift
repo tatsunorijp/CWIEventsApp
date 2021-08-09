@@ -69,7 +69,7 @@ extension EventDetailsViewModel {
         let imageURL: String
     }
     
-    struct Coordinate {
+    struct Coordinate: Equatable {
         let longitud: Double
         let latitude: Double
     }

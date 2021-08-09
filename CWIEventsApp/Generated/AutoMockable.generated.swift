@@ -28,6 +28,9 @@ import AppKit
 
 
 
+class EventDetailsInteractableMock: EventDetailsInteractable {
+
+}
 class EventsInteractableMock: EventsInteractable {
 
     //MARK: - getEvents

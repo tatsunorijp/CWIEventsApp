@@ -99,9 +99,9 @@
 		0E499FFF26BECC7100DB639E /* EventDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailsViewController.xib; sourceTree = "<group>"; };
 		0E49A00626BED28400DB639E /* EventsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsInteractorTests.swift; sourceTree = "<group>"; };
 		0E49A00726BED28400DB639E /* EventsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModelTests.swift; sourceTree = "<group>"; };
-		0E49A00B26BED4B000DB639E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E572EDD26BDCF1600C23FDD /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		0E572EDF26BDD6E900C23FDD /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		0E64477426C15B02000BDFA0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E6F9D4E26BD87E7000F9D59 /* EventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRouter.swift; sourceTree = "<group>"; };
 		0E6F9D4F26BD87E7000F9D59 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		0E6F9D5026BD87E7000F9D59 /* EventsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsBuilder.swift; sourceTree = "<group>"; };
@@ -246,7 +246,7 @@
 		0E98A68326BD66A30085646D /* CWIEventsAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				0E49A00B26BED4B000DB639E /* Info.plist */,
+				0E64477426C15B02000BDFA0 /* Info.plist */,
 				0E98A68426BD66A30085646D /* Scenes */,
 			);
 			path = CWIEventsAppTests;
@@ -1076,7 +1076,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DHFMA3M4H5;
-				INFOPLIST_FILE = ChuckNorrisAppTests/Info.plist;
+				INFOPLIST_FILE = CWIEventsApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1099,7 +1099,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DHFMA3M4H5;
-				INFOPLIST_FILE = ChuckNorrisAppTests/Info.plist;
+				INFOPLIST_FILE = CWIEventsApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

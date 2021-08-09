@@ -18,7 +18,7 @@ final class EventsViewModelTests: XCTestCase {
     private var interactor: EventsInteractableMock!
     
     private var events: TestableObserver<[EventsViewModel.EventsDisplay]>!
-    private var selectedEvent: TestableObserver<Event>!
+//    private var selectedEvent: TestableObserver<Event>!
     private var isLoading: TestableObserver<Bool>!
     private var error: TestableObserver<Error>!
     

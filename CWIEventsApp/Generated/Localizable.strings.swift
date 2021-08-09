@@ -11,6 +11,25 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum CheckIn {
+    internal enum Button {
+      /// CONFIRMAR PRESENÇA
+      internal static let confirm = L10n.tr("Localizable", "CheckIn.Button.Confirm")
+    }
+    internal enum Label {
+      /// Digite seus dados para confirmar a presença no evento
+      internal static let title = L10n.tr("Localizable", "CheckIn.Label.Title")
+    }
+    internal enum TextField {
+      internal enum Placeholder {
+        /// Nome Completo
+        internal static let completeName = L10n.tr("Localizable", "CheckIn.TextField.Placeholder.CompleteName")
+        /// Email
+        internal static let email = L10n.tr("Localizable", "CheckIn.TextField.Placeholder.Email")
+      }
+    }
+  }
+
   internal enum Error {
     /// Request not understood, please contact our providers
     internal static let badRequest = L10n.tr("Localizable", "Error.BadRequest")

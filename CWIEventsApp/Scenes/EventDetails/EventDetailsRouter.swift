@@ -9,21 +9,18 @@
 import UIKit
 
 protocol EventDetailsRouting: AnyObject {
-    // Declare methods to navigate to other scenes
-    // func navigateToOtherScene()
+    func navigateToCheckIn(eventID: String)
 }
 
 final class EventDetailsRouter: Router, EventDetailsRouting {
-    /* All the builders needed when navigating must be passed as parameters in the constructor.
-     init(otherSceneBuilder: OtherSceneBuildable) {
-     self.otherSceneBuilder = otherSceneBuilder
-     }
-
-     func navigateToOtherScene() {
-     let otherScene = otherSceneBuilder.build()
-     viewController.navigationController.pushViewController(otherScene, animated: true)
-     }
-
-     private let otherSceneBuilder: OtherSceneBuildable
-     */
+    let checkInBuilder: CheckInBuildable
+    
+    init(checkInBuilder: CheckInBuildable) {
+        self.checkInBuilder = checkInBuilder
+    }
+    
+    func navigateToCheckIn(eventID: String) {
+        let checkInVC = checkInBuilder.build(eventID: eventID)
+        viewController.navigationController?.pushViewController(checkInVC, animated: true)
+    }
 }

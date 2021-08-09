@@ -19,6 +19,13 @@
 		0E572EE026BDD6E900C23FDD /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E572EDF26BDD6E900C23FDD /* Int.swift */; };
 		0E64477926C16C3C000BDFA0 /* EventDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64477726C16C3C000BDFA0 /* EventDetailsInteractorTests.swift */; };
 		0E64477A26C16C3C000BDFA0 /* EventDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64477826C16C3C000BDFA0 /* EventDetailsViewModelTests.swift */; };
+		0E64478226C174FD000BDFA0 /* CheckInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64477C26C174FD000BDFA0 /* CheckInRouter.swift */; };
+		0E64478326C174FD000BDFA0 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64477D26C174FD000BDFA0 /* CheckInViewController.swift */; };
+		0E64478426C174FD000BDFA0 /* CheckInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64477E26C174FD000BDFA0 /* CheckInBuilder.swift */; };
+		0E64478526C174FD000BDFA0 /* CheckInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64477F26C174FD000BDFA0 /* CheckInInteractor.swift */; };
+		0E64478626C174FD000BDFA0 /* CheckInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64478026C174FD000BDFA0 /* CheckInViewModel.swift */; };
+		0E64478726C174FD000BDFA0 /* CheckInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E64478126C174FD000BDFA0 /* CheckInViewController.xib */; };
+		0E64478926C18B6B000BDFA0 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64478826C18B6B000BDFA0 /* EmptyResponse.swift */; };
 		0E6F9D5426BD87E7000F9D59 /* EventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9D4E26BD87E7000F9D59 /* EventsRouter.swift */; };
 		0E6F9D5526BD87E7000F9D59 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9D4F26BD87E7000F9D59 /* EventsViewController.swift */; };
 		0E6F9D5626BD87E7000F9D59 /* EventsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9D5026BD87E7000F9D59 /* EventsBuilder.swift */; };
@@ -105,6 +112,13 @@
 		0E64477426C15B02000BDFA0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E64477726C16C3C000BDFA0 /* EventDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsInteractorTests.swift; sourceTree = "<group>"; };
 		0E64477826C16C3C000BDFA0 /* EventDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		0E64477C26C174FD000BDFA0 /* CheckInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInRouter.swift; sourceTree = "<group>"; };
+		0E64477D26C174FD000BDFA0 /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
+		0E64477E26C174FD000BDFA0 /* CheckInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInBuilder.swift; sourceTree = "<group>"; };
+		0E64477F26C174FD000BDFA0 /* CheckInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInInteractor.swift; sourceTree = "<group>"; };
+		0E64478026C174FD000BDFA0 /* CheckInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewModel.swift; sourceTree = "<group>"; };
+		0E64478126C174FD000BDFA0 /* CheckInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckInViewController.xib; sourceTree = "<group>"; };
+		0E64478826C18B6B000BDFA0 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		0E6F9D4E26BD87E7000F9D59 /* EventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRouter.swift; sourceTree = "<group>"; };
 		0E6F9D4F26BD87E7000F9D59 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		0E6F9D5026BD87E7000F9D59 /* EventsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsBuilder.swift; sourceTree = "<group>"; };
@@ -222,6 +236,19 @@
 			path = EventDetails;
 			sourceTree = "<group>";
 		};
+		0E64477B26C174EC000BDFA0 /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+				0E64477C26C174FD000BDFA0 /* CheckInRouter.swift */,
+				0E64477D26C174FD000BDFA0 /* CheckInViewController.swift */,
+				0E64477E26C174FD000BDFA0 /* CheckInBuilder.swift */,
+				0E64477F26C174FD000BDFA0 /* CheckInInteractor.swift */,
+				0E64478026C174FD000BDFA0 /* CheckInViewModel.swift */,
+				0E64478126C174FD000BDFA0 /* CheckInViewController.xib */,
+			);
+			path = CheckIn;
+			sourceTree = "<group>";
+		};
 		0E6F9D4D26BD87D0000F9D59 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +329,7 @@
 		0E98A69426BD66A30085646D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0E64477B26C174EC000BDFA0 /* CheckIn */,
 				0E499FF926BECC5F00DB639E /* EventDetails */,
 				0E6F9D4D26BD87D0000F9D59 /* Events */,
 			);
@@ -324,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				0E6F9D5B26BD920A000F9D59 /* Event.swift */,
+				0E64478826C18B6B000BDFA0 /* EmptyResponse.swift */,
 			);
 			path = ResponsesModel;
 			sourceTree = "<group>";
@@ -627,6 +656,7 @@
 				0E98A72E26BD66A40085646D /* LaunchScreen.storyboard in Resources */,
 				0E98A72F26BD66A40085646D /* AutoMockable.stencil in Resources */,
 				0E49A00526BECC7100DB639E /* EventDetailsViewController.xib in Resources */,
+				0E64478726C174FD000BDFA0 /* CheckInViewController.xib in Resources */,
 				0EE7210926BDA7F5009CB6C8 /* EventCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -835,6 +865,8 @@
 				0E98A72226BD66A40085646D /* BaseFloatingPanelController.swift in Sources */,
 				0E98A71B26BD66A40085646D /* BaseTextField.swift in Sources */,
 				0E98A72826BD66A40085646D /* Router.swift in Sources */,
+				0E64478426C174FD000BDFA0 /* CheckInBuilder.swift in Sources */,
+				0E64478526C174FD000BDFA0 /* CheckInInteractor.swift in Sources */,
 				0E98A72A26BD66A40085646D /* SceneDelegate.swift in Sources */,
 				0E49A00326BECC7100DB639E /* EventDetailsInteractor.swift in Sources */,
 				0E98A71826BD66A40085646D /* DiffableBox.swift in Sources */,
@@ -860,14 +892,18 @@
 				0E98A71426BD66A40085646D /* String+Date.swift in Sources */,
 				0E98A72626BD66A40085646D /* BaseInteractor.swift in Sources */,
 				0E98A71226BD66A40085646D /* String.swift in Sources */,
+				0E64478926C18B6B000BDFA0 /* EmptyResponse.swift in Sources */,
 				0E98A6F026BD66A40085646D /* Localizable.strings.swift in Sources */,
 				0E98A71E26BD66A40085646D /* PrimaryButton.swift in Sources */,
 				0E98A70B26BD66A40085646D /* ApiRouter.swift in Sources */,
+				0E64478626C174FD000BDFA0 /* CheckInViewModel.swift in Sources */,
 				0E49A00126BECC7100DB639E /* EventDetailsViewController.swift in Sources */,
+				0E64478326C174FD000BDFA0 /* CheckInViewController.swift in Sources */,
 				0E98A72926BD66A40085646D /* AppDelegate.swift in Sources */,
 				0E98A72526BD66A40085646D /* BaseViewModel.swift in Sources */,
 				0E6F9D5426BD87E7000F9D59 /* EventsRouter.swift in Sources */,
 				0E98A72326BD66A40085646D /* TopRoundedView.swift in Sources */,
+				0E64478226C174FD000BDFA0 /* CheckInRouter.swift in Sources */,
 				0E98A71526BD66A40085646D /* NibLoadable.swift in Sources */,
 				0E98A70F26BD66A40085646D /* UIView.swift in Sources */,
 				0E572EE026BDD6E900C23FDD /* Int.swift in Sources */,

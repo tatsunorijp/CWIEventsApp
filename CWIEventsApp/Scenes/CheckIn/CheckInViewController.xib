@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckInViewController" customModule="CWIEventsApp" customModuleProvider="target">
+            <connections>
+                <outlet property="completeNameTextField" destination="lr0-pE-Wfk" id="fsa-fm-wmM"/>
+                <outlet property="confirmCheckInButton" destination="9l2-ZT-93N" id="q2F-WG-KZf"/>
+                <outlet property="emailTextField" destination="6bd-iJ-Sg6" id="OGJ-aM-7eL"/>
+                <outlet property="titleLabel" destination="8wf-ae-T9R" id="ek2-Kz-qll"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOI-pN-2Cv" customClass="TopRoundedView" customModule="CWIEventsApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="60" width="414" height="836"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1i-hf-ExM">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="836"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdj-jP-poo">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wf-ae-T9R">
+                                            <rect key="frame" x="32" y="32" width="350" height="25.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lr0-pE-Wfk" customClass="RoundedTextField" customModule="CWIEventsApp" customModuleProvider="target">
+                                            <rect key="frame" x="32" y="89.5" width="350" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6bd-iJ-Sg6" customClass="RoundedTextField" customModule="CWIEventsApp" customModuleProvider="target">
+                                            <rect key="frame" x="32" y="155.5" width="350" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9l2-ZT-93N" customClass="PrimaryButton" customModule="CWIEventsApp" customModuleProvider="target">
+                                            <rect key="frame" x="32" y="756" width="350" height="30"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="8wf-ae-T9R" secondAttribute="trailing" constant="32" id="0uF-ac-roO"/>
+                                        <constraint firstItem="8wf-ae-T9R" firstAttribute="top" secondItem="Hdj-jP-poo" secondAttribute="top" constant="32" id="5gF-pa-bKq"/>
+                                        <constraint firstItem="9l2-ZT-93N" firstAttribute="leading" secondItem="Hdj-jP-poo" secondAttribute="leading" constant="32" id="Jlz-y3-4ta"/>
+                                        <constraint firstAttribute="trailing" secondItem="6bd-iJ-Sg6" secondAttribute="trailing" constant="32" id="K4d-6T-9Mb"/>
+                                        <constraint firstItem="6bd-iJ-Sg6" firstAttribute="leading" secondItem="Hdj-jP-poo" secondAttribute="leading" constant="32" id="KoY-GD-HvQ"/>
+                                        <constraint firstItem="9l2-ZT-93N" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6bd-iJ-Sg6" secondAttribute="bottom" constant="32" id="Rzc-fg-Vk0"/>
+                                        <constraint firstAttribute="bottom" secondItem="9l2-ZT-93N" secondAttribute="bottom" constant="32" id="WrA-ka-pTF"/>
+                                        <constraint firstItem="8wf-ae-T9R" firstAttribute="leading" secondItem="Hdj-jP-poo" secondAttribute="leading" constant="32" id="Xla-RX-d29"/>
+                                        <constraint firstItem="lr0-pE-Wfk" firstAttribute="leading" secondItem="Hdj-jP-poo" secondAttribute="leading" constant="32" id="XyH-6t-4CB"/>
+                                        <constraint firstItem="6bd-iJ-Sg6" firstAttribute="top" secondItem="lr0-pE-Wfk" secondAttribute="bottom" constant="32" id="bdO-qy-hTP"/>
+                                        <constraint firstAttribute="trailing" secondItem="9l2-ZT-93N" secondAttribute="trailing" constant="32" id="qAA-Go-MKA"/>
+                                        <constraint firstItem="lr0-pE-Wfk" firstAttribute="top" secondItem="8wf-ae-T9R" secondAttribute="bottom" constant="32" id="sR4-sc-DOa"/>
+                                        <constraint firstAttribute="trailing" secondItem="lr0-pE-Wfk" secondAttribute="trailing" constant="32" id="uAo-UE-ebq"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Hdj-jP-poo" firstAttribute="trailing" secondItem="7mW-db-DWB" secondAttribute="trailing" id="IP6-RI-sOH"/>
+                                <constraint firstItem="Hdj-jP-poo" firstAttribute="leading" secondItem="7mW-db-DWB" secondAttribute="leading" id="ZHE-D6-LeJ"/>
+                                <constraint firstItem="Hdj-jP-poo" firstAttribute="top" secondItem="7mW-db-DWB" secondAttribute="top" id="iNT-gt-7I2"/>
+                                <constraint firstItem="Hdj-jP-poo" firstAttribute="bottom" secondItem="7mW-db-DWB" secondAttribute="bottom" id="q80-lk-8V8"/>
+                            </constraints>
+                            <viewLayoutGuide key="contentLayoutGuide" id="7mW-db-DWB"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="QHh-hj-MHS"/>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="d1i-hf-ExM" secondAttribute="trailing" id="NYg-de-s54"/>
+                        <constraint firstAttribute="bottom" secondItem="d1i-hf-ExM" secondAttribute="bottom" id="XvT-u9-2Y0"/>
+                        <constraint firstItem="d1i-hf-ExM" firstAttribute="leading" secondItem="hOI-pN-2Cv" secondAttribute="leading" id="qcA-aO-h2T"/>
+                        <constraint firstItem="d1i-hf-ExM" firstAttribute="top" secondItem="hOI-pN-2Cv" secondAttribute="top" id="yb3-W3-AgY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Primary500"/>
+            <constraints>
+                <constraint firstItem="hOI-pN-2Cv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6TR-Pg-23n"/>
+                <constraint firstItem="Hdj-jP-poo" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="I30-Hu-V9T"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hOI-pN-2Cv" secondAttribute="trailing" id="arr-ON-x2n"/>
+                <constraint firstAttribute="bottom" secondItem="hOI-pN-2Cv" secondAttribute="bottom" id="au9-PH-Jyp"/>
+                <constraint firstItem="hOI-pN-2Cv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="mcX-3d-6xP"/>
+                <constraint firstItem="Hdj-jP-poo" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" priority="500" id="xHL-Lf-t1g"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="134.59821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Primary500">
+            <color red="0.97647058823529409" green="0.61960784313725492" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

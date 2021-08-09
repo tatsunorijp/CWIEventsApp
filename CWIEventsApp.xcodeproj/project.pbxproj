@@ -23,7 +23,7 @@
 		0E6F9D5726BD87E7000F9D59 /* EventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9D5126BD87E7000F9D59 /* EventsInteractor.swift */; };
 		0E6F9D5826BD87E7000F9D59 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9D5226BD87E7000F9D59 /* EventsViewModel.swift */; };
 		0E6F9D5926BD87E7000F9D59 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E6F9D5326BD87E7000F9D59 /* EventsViewController.xib */; };
-		0E6F9D5C26BD920A000F9D59 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9D5B26BD920A000F9D59 /* Events.swift */; };
+		0E6F9D5C26BD920A000F9D59 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F9D5B26BD920A000F9D59 /* Event.swift */; };
 		0E98A6F026BD66A40085646D /* Localizable.strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98A69126BD66A30085646D /* Localizable.strings.swift */; };
 		0E98A6F126BD66A40085646D /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98A69226BD66A30085646D /* AutoMockable.generated.swift */; };
 		0E98A6F226BD66A40085646D /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98A69326BD66A30085646D /* XCAssets+Generated.swift */; };
@@ -31,7 +31,6 @@
 		0E98A70926BD66A40085646D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98A6B126BD66A30085646D /* Environment.swift */; };
 		0E98A70A26BD66A40085646D /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98A6B226BD66A30085646D /* ApiClient.swift */; };
 		0E98A70B26BD66A40085646D /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98A6B326BD66A30085646D /* ApiRouter.swift */; };
-		0E98A70C26BD66A40085646D /* Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98A6B526BD66A30085646D /* Facts.swift */; };
 		0E98A70E26BD66A40085646D /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98A6B826BD66A30085646D /* Date.swift */; };
 		0E98A70F26BD66A40085646D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98A6B926BD66A30085646D /* UIView.swift */; };
 		0E98A71026BD66A40085646D /* RxExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98A6BA26BD66A30085646D /* RxExtensions.swift */; };
@@ -108,7 +107,7 @@
 		0E6F9D5126BD87E7000F9D59 /* EventsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsInteractor.swift; sourceTree = "<group>"; };
 		0E6F9D5226BD87E7000F9D59 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		0E6F9D5326BD87E7000F9D59 /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
-		0E6F9D5B26BD920A000F9D59 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		0E6F9D5B26BD920A000F9D59 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		0E98A68126BD66A30085646D /* ChuckNorrisAppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChuckNorrisAppUITests.swift; sourceTree = "<group>"; };
 		0E98A68226BD66A30085646D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E98A69126BD66A30085646D /* Localizable.strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.strings.swift; sourceTree = "<group>"; };
@@ -118,7 +117,6 @@
 		0E98A6B126BD66A30085646D /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		0E98A6B226BD66A30085646D /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		0E98A6B326BD66A30085646D /* ApiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
-		0E98A6B526BD66A30085646D /* Facts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facts.swift; sourceTree = "<group>"; };
 		0E98A6B826BD66A30085646D /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		0E98A6B926BD66A30085646D /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		0E98A6BA26BD66A30085646D /* RxExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxExtensions.swift; sourceTree = "<group>"; };
@@ -198,7 +196,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E499FF926BECC5F00DB639E /* EventDeatils */ = {
+		0E499FF926BECC5F00DB639E /* EventDetails */ = {
 			isa = PBXGroup;
 			children = (
 				0E499FFA26BECC7100DB639E /* EventDetailsRouter.swift */,
@@ -208,7 +206,7 @@
 				0E499FFE26BECC7100DB639E /* EventDetailsViewModel.swift */,
 				0E499FFF26BECC7100DB639E /* EventDetailsViewController.xib */,
 			);
-			path = EventDeatils;
+			path = EventDetails;
 			sourceTree = "<group>";
 		};
 		0E6F9D4D26BD87D0000F9D59 /* Events */ = {
@@ -290,7 +288,7 @@
 		0E98A69426BD66A30085646D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				0E499FF926BECC5F00DB639E /* EventDeatils */,
+				0E499FF926BECC5F00DB639E /* EventDetails */,
 				0E6F9D4D26BD87D0000F9D59 /* Events */,
 			);
 			path = Scenes;
@@ -311,8 +309,7 @@
 		0E98A6B426BD66A30085646D /* ResponsesModel */ = {
 			isa = PBXGroup;
 			children = (
-				0E98A6B526BD66A30085646D /* Facts.swift */,
-				0E6F9D5B26BD920A000F9D59 /* Events.swift */,
+				0E6F9D5B26BD920A000F9D59 /* Event.swift */,
 			);
 			path = ResponsesModel;
 			sourceTree = "<group>";
@@ -819,7 +816,7 @@
 				0E98A71026BD66A40085646D /* RxExtensions.swift in Sources */,
 				0E98A70926BD66A40085646D /* Environment.swift in Sources */,
 				0E98A72126BD66A40085646D /* FloatingPanelGrabberView.swift in Sources */,
-				0E6F9D5C26BD920A000F9D59 /* Events.swift in Sources */,
+				0E6F9D5C26BD920A000F9D59 /* Event.swift in Sources */,
 				0E98A71726BD66A40085646D /* ActivityIndicator.swift in Sources */,
 				0E98A72226BD66A40085646D /* BaseFloatingPanelController.swift in Sources */,
 				0E98A71B26BD66A40085646D /* BaseTextField.swift in Sources */,
@@ -845,7 +842,6 @@
 				0E98A72426BD66A40085646D /* BaseViewController.swift in Sources */,
 				0E98A71326BD66A40085646D /* DateFormatter.swift in Sources */,
 				0E98A70826BD66A40085646D /* ApiError.swift in Sources */,
-				0E98A70C26BD66A40085646D /* Facts.swift in Sources */,
 				0EE7210826BDA7F5009CB6C8 /* EventCell.swift in Sources */,
 				0E98A71426BD66A40085646D /* String+Date.swift in Sources */,
 				0E98A72626BD66A40085646D /* BaseInteractor.swift in Sources */,

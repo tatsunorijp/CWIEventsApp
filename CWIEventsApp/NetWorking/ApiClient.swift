@@ -11,10 +11,6 @@ import Alamofire
 
 class ApiClient {
     
-    static func getPosts(term: String) -> Observable<Facts> {
-        return request(ApiRouter.getFacts(term: term))
-    }
-    
     static func getEvents() -> Observable<[Event]> {
         return request(ApiRouter.getEvents)
     }
